@@ -1,0 +1,124 @@
+<!-- Header -->
+<header>
+
+	<!-- Nav -->
+	<nav id="nav" class="navbar">
+		<div class="container">
+
+			<div class="navbar-header">
+				<!-- Logo -->
+				<div class="navbar-brand">
+					<a href="/">
+						<img class="logo" src="/images/logo-alt.png" alt="logo">
+					</a>
+				</div>
+				<!-- /Logo -->
+
+				<!-- Collapse nav button -->
+				<div class="nav-collapse">
+					<span></span>
+				</div>
+				<!-- /Collapse nav button -->
+			</div>
+
+			<!--  Main navigation  -->
+			<ul class="main-nav nav navbar-nav navbar-right">
+				<li><a href="/#home">Home</a></li>
+				<li><a href="/#about">About</a></li>
+				<li><a href="/#portfolio">Categories</a></li>
+				<li><a href="/#service">Services</a></li>
+				<li><a href="/#team">Team</a></li>
+				<li><a href="/blog">News</a>
+					<!-- <ul class="dropdown">
+						<li><a href="#">blog post</a></li>
+					</ul> -->
+				</li>
+				<li><a href="/#contact">Contact</a></li>
+				<li><a href="/assessment">Assessment</a></li>
+				<li><a href="/zh-CN">中文</a></li>
+			</ul>
+			<!-- /Main navigation -->
+
+		</div>
+	</nav>
+	<!-- /Nav -->
+
+	<!-- header wrapper -->
+	<div class="header-wrapper sm-padding bg-grey">
+		<div class="container">
+			<h2>Recent News</h2>
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/">Home</a></li>
+				<li class="breadcrumb-item"><a href="/blog">Recent News</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /header wrapper -->
+
+</header>
+<!-- /Header -->
+
+
+<div class="container sm-padding">
+	<div class="row">
+		<div class="col-md-9">
+			<!-- <h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4> -->
+			<div class="blog">
+				{{# each data.posts.results}}
+				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+					<div class="row">
+						<div class="col-sm-offset-4 col-sm-8">
+							<h3><a href="{{postUrl slug}}">{{{title}}}</a></h3>
+						</div>
+
+						<div class="col-sm-4 post-img-container">
+							{{#if image}}<img src="{{{cloudinaryUrl image crop='fit' }}}" class="img img-responsive">{{/if}}
+						</div>
+						<div class="col-sm-8">
+							<ul class="blog-meta">
+								{{#if author.name.first}}<li><i class="fa fa-user"></i>{{author.name.first}} {{author.name.last}}</li>{{/if}}
+								<li><i class="fa fa-clock-o"></i>{{date publishedDate}}</li>
+								{{#if categories}}<li><i class="fa fa-tags"></i>{{categories.0.name}}</li>{{/if}}
+							</ul>
+							<p>{{{content.brief}}}</p>
+							{{#if content.extended}}<p class="read-more"><a href="{{postUrl slug}}">Read more</a></p>{{/if}}
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<!-- Aside -->
+		<aside id="aside" class="col-md-3">
+
+			<!-- Search -->
+			<div class="widget">
+				<div class="widget-search">
+					<form role="search" action="/blog" method="GET">
+
+							<input class="search-input" type="text" placeholder="search" id="keywords" name="keywords">
+							<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+
+					</form>
+				</div>
+			</div>
+			<!-- /Search -->
+
+			<!-- Category -->
+			<div class="widget">
+				<h3 class="title">Category</h3>
+				<div class="widget-category">
+					<a href="/blog">All Categories</a>
+					{{# each data.categories }}
+					<a href="{{categoryUrl key}}">{{name}}</a>
+					{{/each}}
+				</div>
+			</div>
+			<!-- /Category -->
+		</aside>
+		<!-- /Aside -->
+
+	</div>
+	{{>pagination}}
+</div>

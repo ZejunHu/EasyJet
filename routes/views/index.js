@@ -12,7 +12,6 @@ exports = module.exports = function (req, res) {
 
 	locals.data = {
 		posts: [],
-		testimonials: [],
 	};
 
 	locals.formData = req.body || {};
@@ -37,26 +36,6 @@ exports = module.exports = function (req, res) {
 				locals.enquirySubmitted = true;
 			}
 			next();
-		});
-	});
-
-	////////////////////// Testimonial ///////////////////////////
-	view.on('init', function (next) {
-
-		var q = keystone.list('Testimonial').paginate({
-			page: req.query.page || 1,
-			perPage: 20,
-			maxPages: 1,
-			filters: {
-				state: 'published',
-			},
-		})
-			.sort('-publishedDate')
-			.populate('author categories');
-
-		q.exec(function (err, results) {
-			locals.data.testimonials = results;
-			next(err);
 		});
 	});
 

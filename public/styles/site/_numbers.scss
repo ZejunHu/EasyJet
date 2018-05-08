@@ -5,6 +5,23 @@
 .number {
     text-align: center;
     margin: 15px 0px;
+    img {
+      padding: 2rem;
+      height: auto;
+      width: 100%;
+      // @media (min-width: 768px) {
+      //   height: 10rem;
+      // }
+      // @media (min-width: 992px) {
+      //   height: 15rem;
+      // }
+      // @media (min-width: 1200px) {
+      //   height: 18rem;
+      // }
+    }
+    span {
+      font-size: 2rem;
+    }
 }
 
 .number i {

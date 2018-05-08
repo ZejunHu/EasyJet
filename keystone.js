@@ -64,8 +64,7 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-	posts: ['posts', 'post-categories', 'testimonials'],
-	postsChinese: ['post-chineses', 'post-category-chineses', 'testimonial-chineses'],
+	posts: ['posts', 'post-categories'],
 	enquiries: ['enquiries', 'assessments'],
 	users: 'users',
 });

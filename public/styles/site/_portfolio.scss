@@ -134,33 +134,40 @@
   }
   .modal-content {
     padding: 100px 0;
-    text-align: center;
     h2 {
       font-size: 3em;
-      margin-bottom: 15px;
+      margin-bottom: 3rem;
     }
     p {
       text-align: left;
-      margin-bottom: 30px;
     }
     p.item-intro {
       font-size: 16px;
       //font-style: italic;
-      margin: 20px 0 30px;
     }
-    ul.list-inline {
-      margin-top: 0;
-      margin-bottom: 30px;
-      li {
-        p {
-          display: inline-block;
-        }
-      }
+    ul {
+      list-style-type: disc;
     }
+    ol {
+      list-style-type: decimal;
+    }
+    li {
+      margin-left: 2rem;
+    }
+    // ul.list-inline {
+    //   margin-top: 0;
+    //   margin-bottom: 30px;
+    //   li {
+    //     p {
+    //       display: inline-block;
+    //     }
+    //   }
+    // }
     img {
       margin-bottom: 30px;
     }
     button {
+      margin-top: 3rem;
       cursor: pointer;
     }
   }
@@ -201,5 +208,8 @@
   }
   .modal-backdrop {
 
+  }
+  .modal-block {
+    margin: 1rem 0;
   }
 }

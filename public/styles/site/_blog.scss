@@ -36,9 +36,15 @@
     height: 27rem;
   }
   @media (min-width: 576px) {
-    height: 32rem;
+    height: 36rem;
   }
   @media (min-width: 992px) {
-    height: 18rem;
+    height: 19rem;
+  }
+  @media (min-width: 1200px) {
+    height: 21rem;
+  }
+  @media (min-width: 1500px) {
+    height: 24rem;
   }
 }

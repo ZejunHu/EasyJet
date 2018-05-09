@@ -72,6 +72,9 @@
   @media (min-width: 572px) {
     .about-text {
       font-size: 2rem;
+      p {
+        line-height: 1.9;
+      }
     }
   }
 
@@ -81,6 +84,9 @@
     }
     .about-text {
       flex: 1;
+      p {
+        line-height: 1.7;
+      }
     }
     .about-image {
       flex: 1;
@@ -90,6 +96,9 @@
     .about-text {
       padding: 5rem 4rem;
       letter-spacing: 2.4px;
+      p {
+        line-height: 1.9;
+      }
     }
   }
 }

@@ -3,8 +3,6 @@
   margin-top: 30px; }
 
 #footer {
-  margin-top: 30px;
-  border-top: 1px solid #eeeeee;
   padding-top: 30px;
   color: #777777; }
 
@@ -143,8 +141,8 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
   height: 40px;
   width: 100%;
   border: none;
-  background: #F4F4F4;
-  border-bottom: 2px solid #EEE;
+  background-color: white;
+  border: 1px solid #ccc;
   color: #354052;
   padding: 0px 10px;
   opacity: 0.5;
@@ -185,6 +183,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .main-btn:hover, .white-btn:hover, .outline-btn:hover {
   opacity: 0.8; }
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color: #c02020;
+  border-color: #c02020; }
 
 /*------------------------------------*\
 	Logo
@@ -757,9 +759,10 @@ header {
   position: absolute;
   left: 20px;
   text-align: center;
-  font-size: 32px;
+  font-size: 48px;
   color: #c02020;
-  border-radius: 50%; }
+  border-radius: 50%;
+  margin: 5px; }
 
 .service:after {
   content: "";
@@ -777,6 +780,8 @@ header {
   width: 100%; }
 
 .service h3 {
+  padding-top: 10px;
+  padding-left: 20px;
   -webkit-transition: 0.2s color;
   transition: 0.2s color; }
 
@@ -785,6 +790,9 @@ header {
 
 .service-CN {
   font-size: 15px; }
+
+.service ul {
+  padding-left: 30px; }
 
 /*------------------------------------*\
 	Why choose us
@@ -847,9 +855,15 @@ header {
   text-align: center;
   margin: 15px 0px; }
   .number img {
-    padding: 2rem;
+    padding: 3rem;
     height: auto;
     width: 100%; }
+    @media (min-width: 500px) {
+      .number img {
+        padding: 7rem; } }
+    @media (min-width: 768px) {
+      .number img {
+        padding: 3rem; } }
   .number span {
     font-size: 2rem; }
 
@@ -1387,11 +1401,12 @@ header {
   margin-bottom: 20px; }
 
 .contact-form {
-  text-align: center;
-  margin-top: 40px; }
+  margin-top: 30px; }
 
 .contact-form .input {
-  margin-bottom: 20px; }
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 5px; }
 
 .first-line {
   width: calc(50% - 10px);
@@ -1400,15 +1415,23 @@ header {
 .first-line-right {
   margin-left: 15px; }
 
+.form-group {
+  margin-bottom: 5px; }
+
 /*------------------------------------*\
 	Footer
 \*------------------------------------*/
 #footer {
-  position: relative; }
-
-.footer-logo {
-  text-align: center;
-  margin-bottom: 40px; }
+  position: relative;
+  padding: 30px 0; }
+  #footer img {
+    padding: 2rem; }
+  #footer .footer-wechat {
+    height: 180px;
+    width: 180px; }
+  #footer .footer-logo {
+    height: 180px;
+    width: 150px; }
 
 .footer-logo > a > img {
   max-height: 80px; }
@@ -1437,6 +1460,13 @@ header {
   font-size: 14px;
   text-transform: uppercase;
   margin: 0; }
+
+.footer-infomation {
+  padding-top: 4rem;
+  padding-bottom: 3rem; }
+  @media (min-width: 768px) {
+    .footer-infomation {
+      margin-bottom: 5rem; } }
 
 /*------------------------------------*\
 	Responsive
@@ -1724,7 +1754,11 @@ label {
   list-style-type: disc; }
 
 .showcase li {
-  margin-left: 1.5rem; }
+  margin-left: 1.5rem;
+  font-size: 18px; }
+
+.showcase h2 {
+  color: #c02020; }
 
 .lead {
   font-size: 1.25rem;

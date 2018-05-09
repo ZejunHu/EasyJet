@@ -14,7 +14,6 @@ var Enquiry = new keystone.List('Enquiry', {
 Enquiry.add({
 	name: { type: Types.Name, required: true },
 	email: { type: Types.Email, required: true },
-	subject: { type: String },
 	message: { type: Types.Markdown, required: true },
 	createdAt: { type: Date, default: Date.now },
 });
@@ -53,12 +52,12 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 			templateName: 'enquiry-notification',
 			transport: 'mailgun',
 		}).send({
-			to: "wbsxbysharp@gmail.com",
+			to: "easyjetedu@hotmail.com",
 			from: {
-				name: 'CanNova',
-				email: 'noreply@cannova.com',
+				name: 'EasyJet',
+				email: 'noreply@easyjet-edu.com',
 			},
-			subject: 'New Enquiry for CanNova',
+			subject: 'New Enquiry for EasyJet',
 			enquiry: enquiry,
 			brand: brand,
 			layout: false,
@@ -67,5 +66,5 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 };
 
 Enquiry.defaultSort = '-createdAt';
-Enquiry.defaultColumns = 'name, email, subject, createdAt';
+Enquiry.defaultColumns = 'name, email, createdAt';
 Enquiry.register();

@@ -30,12 +30,12 @@
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="#home">首页</a></li>
-					<li><a href="#about">热门移民</a></li>
+					<li><a href="#category">热门移民</a></li>
 					<li><a href="#service">服务项目</a></li>
-					<li><a href="#features">公司简介</a></li>
+					<li><a href="#about">公司简介</a></li>
 					<li><a href="/blog">最新资讯</a></li>
 					<li><a href="/assessment">在线评估</a></li>
-					<li><a href="#contact">联系我们</a></li>
+					<li><a href="#footer">联系我们</a></li>
 					<!-- <ul class="dropdown"> -->
 					<!-- <li><a href="blog-single.html">blog post</a></li> -->
 					<!-- </ul> -->
@@ -54,7 +54,7 @@
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">易捷留学教育</h1>
+							<h1 class="white-text">易捷留学</h1>
 							<h3 class="white-text">我给你翅膀，你拥抱梦想!</h3>
 							<a href="/blog" class="white-btn">最新资讯</a>
 							<a href="/assessment" class="main-btn">在线评估</a>
@@ -71,7 +71,7 @@
 	<!-- /Header -->
 
 	<!-- About -->
-	<div id="about" class="section md-padding">
+	<div id="category" class="section md-padding">
 
 		<!-- Container -->
 		<div class="container">
@@ -201,7 +201,7 @@
 									<div class="text-center">
 										<button class="btn main-btn" data-dismiss="modal" type="button">
 	                    <i class="fa fa-times"></i>
-	                    Close</button>
+	                    关闭</button>
 									</div>
                 </div>
               </div>
@@ -256,7 +256,7 @@
 										<div class="text-center">
 											<button class="btn main-btn" data-dismiss="modal" type="button">
 		                    <i class="fa fa-times"></i>
-		                    Close</button>
+		                    关闭</button>
 										</div>
 	                </div>
 	              </div>
@@ -306,7 +306,7 @@
 											<div class="text-center">
 												<button class="btn main-btn" data-dismiss="modal" type="button">
 			                    <i class="fa fa-times"></i>
-			                    Close</button>
+			                    关闭</button>
 											</div>
 		                </div>
 		              </div>
@@ -476,7 +476,7 @@
 
 
 	<!-- Testimonial -->
-	<div id="testimonial" class="section md-padding">
+	<div id="about" class="section md-padding">
 
 		<!-- Background Image -->
 		<div class="bg-img" style="background-image: url('/images/4.jpg');">
@@ -610,7 +610,7 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Recents news</h2>
+					<h2 class="title">最新资讯</h2>
 				</div>
 				<!-- /Section header -->
 
@@ -623,13 +623,13 @@
 						</div>
 						<div class="blog-content">
 							<ul class="blog-meta">
-								{{#if author.name.first}}<li><i class="fa fa-user"></i>{{author.name.first}} {{author.name.last}}</li>{{/if}}
+								{{#if author.name.first}}<li><i class="fa fa-user"></i>{{author.name.first}}</li>{{/if}}
 								<li><i class="fa fa-clock-o"></i>{{date publishedDate}}</li>
 								{{#if categories}}<li><i class="fa fa-tags"></i>{{categories.0.name}}</li>{{/if}}
 							</ul>
 							<h3>{{{title}}}</h3>
 							<p>{{{content.brief}}}</p>
-							{{#if content.extended}}<a href="{{postUrl slug}}">Read more</a>{{/if}}
+							{{#if content.extended}}<a href="{{postUrl slug}}">查看详情</a>{{/if}}
 						</div>
 					</div>
 				</div>
@@ -713,87 +713,6 @@
 		</div>
 
 	</div>
-
-	<!-- Contact -->
-	<div id="contact" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section-header -->
-				<div class="section-header text-center">
-					<h2 class="title">Contact Us</h2>
-				</div>
-				<!-- /Section-header -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-phone"></i>
-						<h3>Phone</h3>
-						<p>647-878-5813</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-envelope"></i>
-						<h3>Email</h3>
-						<p>success@can-nova.com</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-map-marker"></i>
-						<h3>Address</h3>
-						<p>#142, 700 Third Line, Oakville, Ontario, L6L 4B1</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact form -->
-				<div class="col-md-8 col-md-offset-2">
-					{{#if enquirySubmitted}}
-					<h3 class="text-center">Thanks for getting in touch.</h3>
-					{{else}}
-					<form class="contact-form" method="post">
-						<input type="hidden" name="action" value="contact">
-						<div class="form-group first-line {{#if validationErrors.name}}has-error{{/if}}">
-							<input type="text" name="name.full"  class="input" placeholder="Name" value="{{formData.[name.full]}}">
-						</div>
-						<div class="form-group first-line first-line-right {{#if validationErrors.email}}has-error{{/if}}">
-							<input type="email" name="email" class="input" placeholder="Email" value="{{formData.email}}">
-						</div>
-						<div class="form-group">
-							<input type="text" name="subject" placeholder="Subject" class="input" value="{{formData.subject}}">
-						</div>
-						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-							<textarea name="message" placeholder="Message" class="input">{{formData.message}}</textarea>
-						</div>
-						<div class="form-actions">
-							<button type="submit" class="main-btn">Send</button>
-						</div>
-					</form>
-					{{/if}}
-				</div>
-				<!-- /contact form -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Contact -->
 
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript">

@@ -14,12 +14,13 @@
 }
 
 .contact-form {
-    text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .contact-form .input {
-    margin-bottom: 20px;
+  background-color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 
@@ -30,4 +31,8 @@
 
 .first-line-right {
     margin-left: 15px;
+}
+
+.form-group {
+  margin-bottom: 5px;
 }

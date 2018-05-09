@@ -1,9 +1,3 @@
-<style>
-p, h1, h2, h3, h4, h5, h6, a {
-	font-family: Yahei;
-}
-</style>
-
 <!-- Header -->
 	<header>
 
@@ -15,7 +9,7 @@ p, h1, h2, h3, h4, h5, h6, a {
 					<!-- Logo -->
 					<div class="navbar-brand">
 						<a href="/">
-							<img class="logo" src="/images/logo-alt.png" alt="logo">
+							<img class="logo" src="/images/logo.png" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -29,14 +23,16 @@ p, h1, h2, h3, h4, h5, h6, a {
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="/#home">Home</a></li>
-					<li><a href="/#about">About</a></li>
-					<li><a href="/#portfolio">Categories</a></li>
-					<li><a href="/#service">Services</a></li>
-					<li><a href="/#team">Team</a></li>
-					<li><a href="/blog">News</a></li>
-					<li><a href="/#contact">Contact</a></li>
-					<li><a href="/assessment">Assessment</a></li>
+					<li><a href="/#home">首页</a></li>
+					<li><a href="/#category">热门移民</a></li>
+					<li><a href="/#service">服务项目</a></li>
+					<li><a href="/#about">公司简介</a></li>
+					<li><a href="/blog">最新资讯</a></li>
+					<li><a href="/assessment">在线评估</a></li>
+					<li><a href="#footer">联系我们</a></li>
+					<!-- <ul class="dropdown"> -->
+					<!-- <li><a href="blog-single.html">blog post</a></li> -->
+					<!-- </ul> -->
 				</ul>
 				<!-- /Main navigation -->
 
@@ -49,8 +45,8 @@ p, h1, h2, h3, h4, h5, h6, a {
 			<div class="container">
 				<h2>{{data.post.title}}</h2>
 				<ul class="breadcrumb">
-					<li class="breadcrumb-item"><a href="/">Home</a></li>
-					<li class="breadcrumb-item"><a href="/blog">Recent News</a></li>
+					<li class="breadcrumb-item"><a href="/">首页</a></li>
+					<li class="breadcrumb-item"><a href="/blog">最新资讯</a></li>
 					<li class="breadcrumb-item active">{{data.post.title}}</li>
 				</ul>
 			</div>
@@ -69,8 +65,39 @@ p, h1, h2, h3, h4, h5, h6, a {
 			<!-- Row -->
 			<div class="row">
 
+				<!-- Aside -->
+				<aside id="aside" class="col-md-3 col-md-push-9">
+
+					<!-- Search -->
+					<div class="widget">
+						<div class="widget-search">
+							<form role="search" action="/blog" method="GET">
+
+									<input class="search-input" type="text" placeholder="搜索" id="keywords" name="keywords">
+									<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+
+							</form>
+						</div>
+					</div>
+					<!-- /Search -->
+
+					<!-- Category -->
+					<div class="widget">
+						<h3 class="title">类别目录</h3>
+						<div class="widget-category">
+							<a href="/blog">全部分类</a>
+							{{# each data.categories }}
+							<a href="{{categoryUrl key}}">{{name}}</a>
+							{{/each}}
+						</div>
+					</div>
+					<!-- /Category -->
+				</aside>
+				<!-- /Aside -->
+
+
 				<!-- Main -->
-				<main id="main" class="col-md-9">
+				<main id="main" class="col-md-9 col-md-pull-3">
 					<div class="blog">
 						{{#if data.post.image}}
 						<div class="blog-img">
@@ -94,37 +121,6 @@ p, h1, h2, h3, h4, h5, h6, a {
 					</div>
 				</main>
 				<!-- /Main -->
-
-
-				<!-- Aside -->
-				<aside id="aside" class="col-md-3">
-
-					<!-- Search -->
-					<div class="widget">
-						<div class="widget-search">
-							<form role="search" action="/blog" method="GET">
-
-									<input class="search-input" type="text" placeholder="search" id="keywords" name="keywords">
-									<button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-
-							</form>
-						</div>
-					</div>
-					<!-- /Search -->
-
-					<!-- Category -->
-					<div class="widget">
-						<h3 class="title">Category</h3>
-						<div class="widget-category">
-							<a href="/blog">All Categories</a>
-							{{# each data.categories }}
-							<a href="{{categoryUrl key}}">{{name}}</a>
-							{{/each}}
-						</div>
-					</div>
-					<!-- /Category -->
-				</aside>
-				<!-- /Aside -->
 
 			</div>
 			<!-- /Row -->

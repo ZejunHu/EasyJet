@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'CanNova',
-	'brand': 'CanNova',
+	'name': 'EasyJet',
+	'brand': 'EasyJet',
 
 	'sass': 'public',
 	'static': 'public',
@@ -82,7 +82,7 @@ if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
 	+ '\nset up your mailgun integration');
 }
 
-keystone.set("signin logo", "../images/logo-alt.png");
+keystone.set("signin logo", "../images/logo.png");
 
 
 keystone.start();

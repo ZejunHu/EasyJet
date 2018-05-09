@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var Enquiry = keystone.list('Enquiry');
 var Assessment = keystone.list('Assessment');
 
 exports = module.exports = function (req, res) {
@@ -19,6 +20,28 @@ exports = module.exports = function (req, res) {
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
 	locals.assessmentSubmitted = false;
+	locals.enquirySubmitted = false;
+
+	/////////////////// Contact //////////////////////
+	// On POST requests, add the Enquiry item to the database
+	view.on('post', { action: 'contact' }, function (next) {
+
+		var newEnquiry = new Enquiry.model();
+		var updater = newEnquiry.getUpdateHandler(req);
+
+		updater.process(req.body, {
+			flashErrors: true,
+			fields: 'name, email, message',
+			errorMessage: 'There was a problem submitting your enquiry:',
+		}, function (err) {
+			if (err) {
+				locals.validationErrors = err.errors;
+			} else {
+				locals.enquirySubmitted = true;
+			}
+			next();
+		});
+	});
 
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'assessment' }, function (next) {

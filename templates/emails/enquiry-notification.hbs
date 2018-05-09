@@ -1,4 +1,4 @@
-<h1>Hi Can-Nova!</h1>
+<h1>Hi EasyJet!</h1>
 <p class="text-larger">An enquiry was just submitted to {{brand}}:</p>
 {{#if enquiry.email}}
 	<p class="text-larger">From
@@ -10,10 +10,6 @@
 		(<a href="mailto:{{enquiry.email}}">{{enquiry.email}}</a>)
 	{{/if}}
 	</p>
-
-	{{#if enquiry.subject}}
-		<p class="text-larger">Subject: {{enquiry.subject}}</p>
-	{{/if}}
 
 	{{#if enquiry.message}}
 		{{{enquiry.message.html}}}

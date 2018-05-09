@@ -113,13 +113,12 @@ Assessment.schema.methods.sendNotificationEmail = function (callback) {
 			templateName: 'assessment-notification',
 			transport: 'mailgun',
 		}).send({
-			//to: "success@can-nova.com",
-			to: "wbsxbysharp@gmail.com",
+			to: "easyjetedu@hotmail.com",
 			from: {
-				name: 'CanNova',
-				email: 'noreply@cannova.com',
+				name: 'EasyJet',
+				email: 'noreply@easyjet-edu.com',
 			},
-			subject: 'New Online Assessment for CanNova',
+			subject: 'New Online Assessment for EasyJet',
 			assessment: assessment,
 			brand: brand,
 			layout: false,

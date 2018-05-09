@@ -27,7 +27,7 @@ exports = module.exports = function (req, res) {
 
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'name, email, subject, message',
+			fields: 'name, email, message',
 			errorMessage: 'There was a problem submitting your enquiry:',
 		}, function (err) {
 			if (err) {
@@ -46,7 +46,7 @@ exports = module.exports = function (req, res) {
 
 		var q = keystone.list('Post').paginate({
 			page: req.query.page || 1,
-			perPage: 3,
+			perPage: 4,
 			maxPages: 1,
 			filters: {
 				state: 'published',

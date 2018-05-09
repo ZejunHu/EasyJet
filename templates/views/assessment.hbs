@@ -1,9 +1,3 @@
-<style>
-p, h1, h2, h3, h4, h5, h6, a {
-	font-family: Yahei;
-}
-</style>
-
 <!-- Header -->
 <header>
 
@@ -15,7 +9,7 @@ p, h1, h2, h3, h4, h5, h6, a {
 				<!-- Logo -->
 				<div class="navbar-brand">
 					<a href="/">
-						<img class="logo" src="/images/logo-alt.png" alt="logo">
+						<img class="logo" src="/images/logo.png" alt="logo">
 					</a>
 				</div>
 				<!-- /Logo -->
@@ -29,18 +23,16 @@ p, h1, h2, h3, h4, h5, h6, a {
 
 			<!--  Main navigation  -->
 			<ul class="main-nav nav navbar-nav navbar-right">
-				<li><a href="/#home">Home</a></li>
-				<li><a href="/#about">About</a></li>
-				<li><a href="/#portfolio">Categories</a></li>
-				<li><a href="/#service">Services</a></li>
-				<li><a href="/#team">Team</a></li>
-				<li><a href="/blog">News</a>
-					<!-- <ul class="dropdown">
-						<li><a href="#">blog post</a></li>
-					</ul> -->
-				</li>
-				<li><a href="/#contact">Contact</a></li>
-				<li><a href="/assessment">Assessment</a></li>
+				<li><a href="/#home">首页</a></li>
+				<li><a href="/#category">热门移民</a></li>
+				<li><a href="/#service">服务项目</a></li>
+				<li><a href="/#about">公司简介</a></li>
+				<li><a href="/blog">最新资讯</a></li>
+				<li><a href="/assessment">在线评估</a></li>
+				<li><a href="#footer">联系我们</a></li>
+				<!-- <ul class="dropdown"> -->
+				<!-- <li><a href="blog-single.html">blog post</a></li> -->
+				<!-- </ul> -->
 			</ul>
 			<!-- /Main navigation -->
 
@@ -51,21 +43,21 @@ p, h1, h2, h3, h4, h5, h6, a {
 	<!-- header wrapper -->
 	<div class="header-wrapper sm-padding bg-grey">
 		<div class="container">
-			<h2>Online Assessment</h2>
+			<h2>在线评估</h2>
 			<ul class="breadcrumb">
-				<li class="breadcrumb-item"><a href="/">Home</a></li>
-				<li class="breadcrumb-item"><a href="/assessment">Online Assessment</a></li>
+				<li class="breadcrumb-item"><a href="/">首页</a></li>
+				<li class="breadcrumb-item"><a href="/assessment">在线评估</a></li>
 			</ul>
 		</div>
 	</div>
 	<!-- /header wrapper -->
 
 	<!-- contact form -->
-	<div class="container mt-5">
+	<div class="container mt-5 mb-2">
 		<div class="row">
 			<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
 				{{#if assessmentSubmitted}}
-				<h3>Thank you, we will reply as soon as possible!</h3>
+				<h3>谢谢！我们会尽快回复！</h3>
 				{{else}}
 				<form method="post">
 					<input type="hidden" name="action" value="assessment">
@@ -372,8 +364,8 @@ p, h1, h2, h3, h4, h5, h6, a {
 						</div>
 					</div>
 
-					<div class="form-actions">
-						<button type="submit" class="btn btn-primary">Submit</button>
+					<div class="form-actions mb-2">
+						<button type="submit" class="btn main-btn mb-2">提交</button>
 					</div>
 				</form>
 				{{/if}}

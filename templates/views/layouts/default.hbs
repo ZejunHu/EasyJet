@@ -10,6 +10,7 @@
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
 		<!-- Bootstrap -->
 		<link type="text/css" rel="stylesheet" href="/styles/plugin/bootstrap.min.css" />
@@ -72,7 +73,67 @@
 		</div>
 
 		<!-- Footer -->
-	<footer id="footer" class="sm-padding bg-dark">
+	<footer id="footer" class="bg-dark">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- contact form -->
+				<div class="col-sm-6 col-md-4">
+					<h3 class="white-text">联系我们</h3>
+					{{#if enquirySubmitted}}
+					<h3 class="text-center white-text">谢谢！我们会尽快回复！</h3>
+					{{else}}
+					<form class="contact-form" method="post">
+						<input type="hidden" name="action" value="contact">
+						<div class="form-group first-line {{#if validationErrors.name}}has-error{{/if}}">
+							<input type="text" name="name.full"  class="input" placeholder="&#xF007;&nbsp;&nbsp;&nbsp;姓名" value="{{formData.[name.full]}}" style="font-family:Arial, FontAwesome">
+						</div>
+						<div class="form-group first-line first-line-right {{#if validationErrors.email}}has-error{{/if}}">
+							<input type="email" name="email" class="input" placeholder="&#xF0E0;&nbsp;&nbsp;&nbsp;邮箱" value="{{formData.email}}" style="font-family:Arial, FontAwesome">
+						</div>
+						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+							<textarea name="message" placeholder="留言" class="input" style="font-family:Arial, FontAwesome">{{formData.message}}</textarea>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="main-btn">发送</button>
+						</div>
+					</form>
+					{{/if}}
+				</div>
+				<div class="col-sm-6 col-md-4 white-text footer-infomation">
+					<div class="">
+						<p>地址：23 Sheppard Ave East, North York,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ON, Canada  M2N 0C8</p>
+					</div>
+					<div class="">
+						<p>电话：+1 647 281 5077（加拿大）<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+86 135 0535 7670 （中国）</p>
+					</div>
+					<div class="">
+						<p>邮箱：easyjetedu@hotmail.com</p>
+					</div>
+				</div>
+
+				<!-- /contact form -->
+
+				<div class="col-xs-12 col-md-4 my-2">
+					<div class="row">
+						<div class="col-xs-6 text-center">
+							<img src="/images/wechat.png" class="footer-wechat" alt="wechat">
+						</div>
+						<div class="col-xs-6 text-center">
+							<img src="/images/logo-small.png" class="footer-logo" alt="logo">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
 
 		<!-- Container -->
 		<div class="container">
@@ -81,23 +142,6 @@
 			<div class="row">
 
 				<div class="col-md-12">
-
-					<!-- footer logo -->
-					<div class="footer-logo">
-						<a href="/"><img src="/images/logo-alt.png" alt="logo"></a>
-					</div>
-					<!-- /footer logo -->
-
-					<!-- footer follow -->
-					<ul class="footer-follow">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-					</ul>
-					<!-- /footer follow -->
 
 					<!-- footer copyright -->
 					<div class="footer-copyright">

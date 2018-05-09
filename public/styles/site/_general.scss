@@ -164,8 +164,8 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
     height: 40px;
     width: 100%;
     border: none;
-	  background: $gray-100;
-    border-bottom: 2px solid $gray-300;
+	  background-color: white;
+    border: 1px solid #ccc;
     color: #354052;
     padding: 0px 10px;
     opacity: 0.5;
@@ -183,6 +183,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     border-color: $primary;
     opacity: 1;
 }
+
 
 /* --  Buttons  -- */
 
@@ -214,4 +215,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .main-btn:hover, .white-btn:hover, .outline-btn:hover {
     opacity: 0.8;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background-color: $primary;
+  border-color: $primary;
 }

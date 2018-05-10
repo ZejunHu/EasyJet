@@ -450,7 +450,9 @@ header {
   position: relative; }
 
 #home {
-  height: 100vh; }
+  height: 100vh;
+  -moz-background-size: cover;
+  -webkit-background-size: cover; }
 
 #home .home-wrapper {
   position: absolute;
@@ -1459,7 +1461,7 @@ header {
     width: 180px; }
   #footer .footer-logo {
     height: 180px;
-    width: 150px; }
+    width: 125px; }
 
 .footer-logo > a > img {
   max-height: 80px; }

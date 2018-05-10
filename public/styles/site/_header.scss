@@ -8,6 +8,8 @@ header {
 
 #home {
     height: 100vh;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 #home .home-wrapper {

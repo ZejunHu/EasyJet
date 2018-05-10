@@ -99,16 +99,18 @@ ul, ol {
 /* --  background image section  -- */
 .bg-img {
   position: absolute;
-  left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
-  background-position: center;
-  background-size: cover;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: fixed;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
-  -webkit-background-size: cover; }
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1; }
 
 .bg-img .overlay {
   position: absolute;
@@ -453,8 +455,28 @@ header {
 
 #home {
   height: 100vh; }
-  #home .bg-img {
-    background-image: url("../images/header.jpg"); }
+  #home .header-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1; }
+    #home .header-bg .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .8;
+      background: #1C1D21; }
 
 #home .home-wrapper {
   position: absolute;

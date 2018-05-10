@@ -113,16 +113,18 @@ ul, ol {
 
 .bg-img {
     position: absolute;
-    left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
-    background-position: center;
-    background-size: cover;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: fixed;
-    -moz-background-size: cover;
     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
 }
 
 .bg-img .overlay {

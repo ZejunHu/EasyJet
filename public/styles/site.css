@@ -106,7 +106,9 @@ ul, ol {
   z-index: -1;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover; }
 
 .bg-img .overlay {
   position: absolute;
@@ -450,9 +452,7 @@ header {
   position: relative; }
 
 #home {
-  height: 100vh;
-  -moz-background-size: cover;
-  -webkit-background-size: cover; }
+  height: 100vh; }
 
 #home .home-wrapper {
   position: absolute;

@@ -22,8 +22,8 @@ keystone.init({
 
 	// "wysiwyg images": true,
 	"wysiwyg cloudinary images": true,
-	"wysiwyg additional buttons": "fontselect, fontsizeselect",
-	"wysiwyg additional plugins": "paste",
+	"wysiwyg additional buttons": "paste, fontselect, fontsizeselect, forecolor, backcolor",
+	"wysiwyg additional plugins": "paste, textcolor",
 	"wysiwyg additional options": {
 		paste_data_images: true,
 		external_plugins: { uploadimage: "/js/uploadimage/plugin.min.js" }

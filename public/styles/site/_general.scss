@@ -121,6 +121,8 @@ ul, ol {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .bg-img .overlay {

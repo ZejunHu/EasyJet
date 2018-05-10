@@ -8,6 +8,9 @@ header {
 
 #home {
     height: 100vh;
+    .bg-img {
+      background-image: url('../images/header.jpg');
+    }
 }
 
 #home .home-wrapper {

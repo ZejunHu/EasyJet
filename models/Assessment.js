@@ -116,7 +116,7 @@ Assessment.schema.methods.sendNotificationEmail = function (callback) {
 			to: "easyjetedu@hotmail.com",
 			from: {
 				name: 'EasyJet',
-				email: 'noreply@easyjet-edu.com',
+				email: 'noreply@easyjetedu.com',
 			},
 			subject: 'New Online Assessment for EasyJet',
 			assessment: assessment,

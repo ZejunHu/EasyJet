@@ -105,12 +105,15 @@ ul, ol {
   left: 0;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   z-index: -1; }
+  @media (min-width: 768px) {
+    .bg-img {
+      background-attachment: fixed; } }
 
 .bg-img .overlay {
   position: absolute;

@@ -80,8 +80,12 @@ ul, ol {
   position: relative; }
 
 .md-padding {
-  padding-top: 120px;
-  padding-bottom: 120px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  @media (min-width: 768px) {
+    .md-padding {
+      padding-top: 120px;
+      padding-bottom: 120px; } }
 
 .sm-padding {
   padding-top: 60px;
@@ -1797,7 +1801,10 @@ label {
   padding: 2rem; }
   .category p {
     font-weight: bold;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
+    @media (min-width: 768px) {
+      .category p {
+        font-size: 2rem; } }
   .category img {
     margin: auto;
     max-height: 300px; }
